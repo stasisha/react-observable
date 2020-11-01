@@ -1,10 +1,9 @@
 import React, { useRef } from 'react';
-import { observe } from './state/observerable';
-import { useStoreContext } from './state/StoreContextProvider';
+import { useUserContext } from './state/UserContext';
 
 function User() {
 
-  const store = useStoreContext();
+  const store = useUserContext();
   const refRender = useRef(0);
 
   return (
@@ -25,4 +24,4 @@ function User() {
   );
 }
 
-export default observe(User);
+export default User;
